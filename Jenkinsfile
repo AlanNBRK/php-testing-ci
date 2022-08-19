@@ -28,6 +28,15 @@ pipeline{
 				sh 'docker push alannbrk/php-image:latest'
 			}
 		}
+		
+		stage('Ansible Deploy') {
+
+			steps {
+				ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'deploy-docker.yml'
+			}
+		}
+		
+			
 	}
 
 	post {
