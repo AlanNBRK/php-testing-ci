@@ -32,7 +32,7 @@ pipeline{
 		stage('Deploy') {
 
 			steps {
-				ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'deploy-docker.yml'
+				sh 'ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'deploy-docker.yml''
 			}
 		}
 		
