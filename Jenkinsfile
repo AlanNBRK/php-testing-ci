@@ -32,7 +32,7 @@ pipeline{
 		stage('Deploy') {
 
 			steps {
-				sh 'ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.ini', playbook: 'deploy-docker.yml''
+				sh 'docker push alannbrk/php-image:latest'
 			}
 		}
 		
