@@ -1,0 +1,10 @@
+# php.yml 
+--- 
+- hosts: dev 
+  become: True 
+  tasks: 
+  
+    - name: Deploy static website 
+      copy: 
+       src: index.php # We have define a html page 
+       dest: /var/www/html/
