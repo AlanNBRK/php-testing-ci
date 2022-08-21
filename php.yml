@@ -1,6 +1,6 @@
 # php.yml 
 --- 
-- hosts: dev 
+- hosts: ubuntuServer01 
   become: True 
   tasks: 
   
