@@ -1,2 +1,2 @@
-[webservers]
+[dev]
 172.17.0.2 ansible_user=root
